@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		D9A949322224A2330024A1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A949312224A2330024A1AD /* AppDelegate.swift */; };
 		D9A949342224A2330024A1AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A949332224A2330024A1AD /* ViewController.swift */; };
-		D9A949372224A2330024A1AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A949352224A2330024A1AD /* Main.storyboard */; };
 		D9A949392224A2340024A1AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A949382224A2340024A1AD /* Assets.xcassets */; };
 		D9A9493C2224A2340024A1AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A9493A2224A2340024A1AD /* LaunchScreen.storyboard */; };
+		D9A949442224A2560024A1AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A949432224A2560024A1AD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D9A9492E2224A2330024A1AD /* DailyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A949312224A2330024A1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A949332224A2330024A1AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D9A949362224A2330024A1AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9A949382224A2340024A1AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9A9493B2224A2340024A1AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9A9493D2224A2340024A1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9A949432224A2560024A1AD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../../../../../Volumes/DRIVE/Senior Year/SEMESTER II/_ELA_/Student Planner/Student Planner/Main.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +54,12 @@
 		D9A949302224A2330024A1AD /* DailyPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				D9A949312224A2330024A1AD /* AppDelegate.swift */,
-				D9A949332224A2330024A1AD /* ViewController.swift */,
-				D9A949352224A2330024A1AD /* Main.storyboard */,
-				D9A949382224A2340024A1AD /* Assets.xcassets */,
 				D9A9493A2224A2340024A1AD /* LaunchScreen.storyboard */,
+				D9A949432224A2560024A1AD /* Main.storyboard */,
+				D9A949332224A2330024A1AD /* ViewController.swift */,
+				D9A949312224A2330024A1AD /* AppDelegate.swift */,
 				D9A9493D2224A2340024A1AD /* Info.plist */,
+				D9A949382224A2340024A1AD /* Assets.xcassets */,
 			);
 			path = DailyPlanner;
 			sourceTree = "<group>";
@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					D9A9492D2224A2330024A1AD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -122,9 +123,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A949442224A2560024A1AD /* Main.storyboard in Resources */,
 				D9A9493C2224A2340024A1AD /* LaunchScreen.storyboard in Resources */,
 				D9A949392224A2340024A1AD /* Assets.xcassets in Resources */,
-				D9A949372224A2330024A1AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,14 +144,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D9A949352224A2330024A1AD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9A949362224A2330024A1AD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D9A9493A2224A2340024A1AD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +284,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Sam-Ziegler.DailyPlanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,7 +302,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Sam-Ziegler.DailyPlanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
