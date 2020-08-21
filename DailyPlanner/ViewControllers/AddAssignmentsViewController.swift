@@ -13,7 +13,7 @@ class AddAssignmentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        print("Add assignments screen loaded")
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
 }

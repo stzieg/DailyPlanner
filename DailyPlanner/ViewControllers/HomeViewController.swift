@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("View has loaded")
+        print("Home screen loaded")
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
