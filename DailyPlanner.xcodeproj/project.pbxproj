@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		D9A949322224A2330024A1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A949312224A2330024A1AD /* AppDelegate.swift */; };
-		D9A949342224A2330024A1AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A949332224A2330024A1AD /* ViewController.swift */; };
+		D9A949342224A2330024A1AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A949332224A2330024A1AD /* HomeViewController.swift */; };
 		D9A949392224A2340024A1AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A949382224A2340024A1AD /* Assets.xcassets */; };
 		D9A9493C2224A2340024A1AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A9493A2224A2340024A1AD /* LaunchScreen.storyboard */; };
+		D9AD896424F0B2AE00F49EB5 /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD896324F0B2AE00F49EB5 /* NavBarViewController.swift */; };
+		D9D17BCC24EF210100BB4BE7 /* AddAssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D17BCB24EF210100BB4BE7 /* AddAssignmentsViewController.swift */; };
+		D9D17BCE24EF218300BB4BE7 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D17BCD24EF218300BB4BE7 /* TasksViewController.swift */; };
+		D9D17BD024EF21BC00BB4BE7 /* AddTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D17BCF24EF21BC00BB4BE7 /* AddTasksViewController.swift */; };
 		D9D3B86E24ED9DA3005E8A42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D3B86D24ED9DA3005E8A42 /* Main.storyboard */; };
+		D9D3B87424EEC734005E8A42 /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D3B87324EEC734005E8A42 /* AssignmentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D9A9492E2224A2330024A1AD /* DailyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A949312224A2330024A1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9A949332224A2330024A1AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9A949332224A2330024A1AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D9A949382224A2340024A1AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9A9493B2224A2340024A1AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9A9493D2224A2340024A1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9AD896324F0B2AE00F49EB5 /* NavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
+		D9D17BCB24EF210100BB4BE7 /* AddAssignmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmentsViewController.swift; sourceTree = "<group>"; };
+		D9D17BCD24EF218300BB4BE7 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		D9D17BCF24EF21BC00BB4BE7 /* AddTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTasksViewController.swift; sourceTree = "<group>"; };
 		D9D3B86D24ED9DA3005E8A42 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D9D3B87324EEC734005E8A42 /* AssignmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,35 @@
 		D9A949302224A2330024A1AD /* DailyPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				D9A9493A2224A2340024A1AD /* LaunchScreen.storyboard */,
-				D9D3B86D24ED9DA3005E8A42 /* Main.storyboard */,
-				D9A949332224A2330024A1AD /* ViewController.swift */,
+				D9D17BC924EF0A7300BB4BE7 /* UI */,
+				D9D17BCA24EF128100BB4BE7 /* ViewControllers */,
 				D9A949312224A2330024A1AD /* AppDelegate.swift */,
 				D9A9493D2224A2340024A1AD /* Info.plist */,
 				D9A949382224A2340024A1AD /* Assets.xcassets */,
 			);
 			path = DailyPlanner;
+			sourceTree = "<group>";
+		};
+		D9D17BC924EF0A7300BB4BE7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D9A9493A2224A2340024A1AD /* LaunchScreen.storyboard */,
+				D9D3B86D24ED9DA3005E8A42 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D9D17BCA24EF128100BB4BE7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9A949332224A2330024A1AD /* HomeViewController.swift */,
+				D9D3B87324EEC734005E8A42 /* AssignmentsViewController.swift */,
+				D9D17BCB24EF210100BB4BE7 /* AddAssignmentsViewController.swift */,
+				D9D17BCD24EF218300BB4BE7 /* TasksViewController.swift */,
+				D9D17BCF24EF21BC00BB4BE7 /* AddTasksViewController.swift */,
+				D9AD896324F0B2AE00F49EB5 /* NavBarViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9A949342224A2330024A1AD /* ViewController.swift in Sources */,
+				D9D3B87424EEC734005E8A42 /* AssignmentsViewController.swift in Sources */,
+				D9D17BD024EF21BC00BB4BE7 /* AddTasksViewController.swift in Sources */,
+				D9AD896424F0B2AE00F49EB5 /* NavBarViewController.swift in Sources */,
+				D9D17BCC24EF210100BB4BE7 /* AddAssignmentsViewController.swift in Sources */,
+				D9D17BCE24EF218300BB4BE7 /* TasksViewController.swift in Sources */,
+				D9A949342224A2330024A1AD /* HomeViewController.swift in Sources */,
 				D9A949322224A2330024A1AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
