@@ -13,7 +13,6 @@ class NavBarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
     
