@@ -192,6 +192,9 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="courseNameClose:" destination="hQm-Eg-B8d" eventType="primaryActionTriggered" id="8lg-Fd-see"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="syF-Ie-jrE">
                                 <rect key="frame" x="25" y="193" width="364" height="34"/>
@@ -205,6 +208,9 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="assignmentClose:" destination="hQm-Eg-B8d" eventType="primaryActionTriggered" id="gtN-Bb-obZ"/>
+                                </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a7p-Pc-6jG">
                                 <rect key="frame" x="0.0" y="287" width="414" height="216"/>
@@ -284,6 +290,11 @@
                         <viewLayoutGuide key="safeArea" id="iHn-pc-gLV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add" id="Cdc-Uy-OQx"/>
+                    <connections>
+                        <outlet property="AssignmentNameField" destination="syF-Ie-jrE" id="Mts-Om-2Ll"/>
+                        <outlet property="AssignmentNotesField" destination="KHK-2p-kS6" id="IgH-Lv-3yW"/>
+                        <outlet property="CourseNameField" destination="CPw-wH-Fat" id="aHe-1q-rcJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dZ-TJ-bVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -354,6 +365,9 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeTaskName:" destination="BZK-1U-2mD" eventType="primaryActionTriggered" id="MaG-3r-48v"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-qs-3wH">
                                 <rect key="frame" x="25" y="415" width="364" height="32"/>
@@ -409,7 +423,6 @@
                             <constraint firstItem="aIW-qs-3wH" firstAttribute="leading" secondItem="OqS-Bd-ogb" secondAttribute="leading" constant="25" id="7JC-GK-kky"/>
                             <constraint firstItem="xPS-wO-wmP" firstAttribute="top" secondItem="qad-od-p58" secondAttribute="bottom" constant="25" id="8ld-0w-BoQ"/>
                             <constraint firstItem="OqS-Bd-ogb" firstAttribute="trailing" secondItem="naO-G5-koN" secondAttribute="trailing" constant="25" id="9cq-0M-mDT"/>
-                            <constraint firstItem="Pfb-zv-hbH" firstAttribute="top" secondItem="aIW-qs-3wH" secondAttribute="bottom" constant="20" id="CtQ-e8-nmx"/>
                             <constraint firstItem="OqS-Bd-ogb" firstAttribute="trailing" secondItem="cbf-Us-4kL" secondAttribute="trailing" constant="25" id="Egh-vN-krq"/>
                             <constraint firstItem="qXV-EZ-tzg" firstAttribute="top" secondItem="cbf-Us-4kL" secondAttribute="bottom" constant="8" id="FtB-nN-aDk"/>
                             <constraint firstItem="aIW-qs-3wH" firstAttribute="top" secondItem="qXV-EZ-tzg" secondAttribute="bottom" constant="8" id="G9e-eY-wL1"/>
@@ -426,6 +439,7 @@
                             <constraint firstItem="OqS-Bd-ogb" firstAttribute="trailing" secondItem="Pfb-zv-hbH" secondAttribute="trailing" constant="25" id="hFg-6t-gsU"/>
                             <constraint firstItem="OqS-Bd-ogb" firstAttribute="trailing" secondItem="xPS-wO-wmP" secondAttribute="trailing" constant="25" id="hmh-b9-EQ1"/>
                             <constraint firstItem="cbf-Us-4kL" firstAttribute="top" secondItem="xPS-wO-wmP" secondAttribute="bottom" constant="25" id="mrg-Do-40K"/>
+                            <constraint firstItem="Pfb-zv-hbH" firstAttribute="top" secondItem="aIW-qs-3wH" secondAttribute="bottom" constant="20" id="qpj-Po-XZ4"/>
                             <constraint firstItem="naO-G5-koN" firstAttribute="leading" secondItem="OqS-Bd-ogb" secondAttribute="leading" constant="25" id="vTk-bP-3zL"/>
                             <constraint firstItem="Pfb-zv-hbH" firstAttribute="leading" secondItem="OqS-Bd-ogb" secondAttribute="leading" constant="25" id="vi2-Sq-wQ8"/>
                             <constraint firstItem="qXV-EZ-tzg" firstAttribute="top" secondItem="cbf-Us-4kL" secondAttribute="bottom" constant="8" id="zkJ-mW-wr8"/>
@@ -433,6 +447,10 @@
                         <viewLayoutGuide key="safeArea" id="OqS-Bd-ogb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add" id="TuJ-JH-k6i"/>
+                    <connections>
+                        <outlet property="TaskNameField" destination="xPS-wO-wmP" id="6iR-l0-Afj"/>
+                        <outlet property="TaskNotesField" destination="Pfb-zv-hbH" id="12X-Yb-fWW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USN-Qn-YZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
