@@ -12,6 +12,11 @@
 		D9A949392224A2340024A1AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A949382224A2340024A1AD /* Assets.xcassets */; };
 		D9A9493C2224A2340024A1AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A9493A2224A2340024A1AD /* LaunchScreen.storyboard */; };
 		D9AD896424F0B2AE00F49EB5 /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD896324F0B2AE00F49EB5 /* NavBarViewController.swift */; };
+		D9B6B1C024F759B9007D1979 /* DailyPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9B6B1BE24F759B9007D1979 /* DailyPlanner.xcdatamodeld */; };
+		D9B6B1C324F75B76007D1979 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6B1C124F75B76007D1979 /* Task+CoreDataClass.swift */; };
+		D9B6B1C424F75B76007D1979 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6B1C224F75B76007D1979 /* Task+CoreDataProperties.swift */; };
+		D9B6B1C924F75F5E007D1979 /* Assignment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6B1C724F75F5E007D1979 /* Assignment+CoreDataClass.swift */; };
+		D9B6B1CA24F75F5E007D1979 /* Assignment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B6B1C824F75F5E007D1979 /* Assignment+CoreDataProperties.swift */; };
 		D9D17BCC24EF210100BB4BE7 /* AddAssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D17BCB24EF210100BB4BE7 /* AddAssignmentsViewController.swift */; };
 		D9D17BCE24EF218300BB4BE7 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D17BCD24EF218300BB4BE7 /* TasksViewController.swift */; };
 		D9D17BD024EF21BC00BB4BE7 /* AddTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D17BCF24EF21BC00BB4BE7 /* AddTasksViewController.swift */; };
@@ -27,6 +32,11 @@
 		D9A9493B2224A2340024A1AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9A9493D2224A2340024A1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9AD896324F0B2AE00F49EB5 /* NavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
+		D9B6B1BF24F759B9007D1979 /* DailyPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyPlanner.xcdatamodel; sourceTree = "<group>"; };
+		D9B6B1C124F75B76007D1979 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D9B6B1C224F75B76007D1979 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D9B6B1C724F75F5E007D1979 /* Assignment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assignment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D9B6B1C824F75F5E007D1979 /* Assignment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assignment+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D9D17BCB24EF210100BB4BE7 /* AddAssignmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmentsViewController.swift; sourceTree = "<group>"; };
 		D9D17BCD24EF218300BB4BE7 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		D9D17BCF24EF21BC00BB4BE7 /* AddTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTasksViewController.swift; sourceTree = "<group>"; };
@@ -66,11 +76,32 @@
 			children = (
 				D9D17BC924EF0A7300BB4BE7 /* UI */,
 				D9D17BCA24EF128100BB4BE7 /* ViewControllers */,
+				D9B6B1C524F75B8E007D1979 /* Data */,
+				D9B6B1C624F75C2C007D1979 /* Resources */,
 				D9A949312224A2330024A1AD /* AppDelegate.swift */,
 				D9A9493D2224A2340024A1AD /* Info.plist */,
-				D9A949382224A2340024A1AD /* Assets.xcassets */,
 			);
 			path = DailyPlanner;
+			sourceTree = "<group>";
+		};
+		D9B6B1C524F75B8E007D1979 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D9B6B1C724F75F5E007D1979 /* Assignment+CoreDataClass.swift */,
+				D9B6B1C824F75F5E007D1979 /* Assignment+CoreDataProperties.swift */,
+				D9B6B1C124F75B76007D1979 /* Task+CoreDataClass.swift */,
+				D9B6B1C224F75B76007D1979 /* Task+CoreDataProperties.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D9B6B1C624F75C2C007D1979 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9B6B1BE24F759B9007D1979 /* DailyPlanner.xcdatamodeld */,
+				D9A949382224A2340024A1AD /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D9D17BC924EF0A7300BB4BE7 /* UI */ = {
@@ -168,11 +199,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9D3B87424EEC734005E8A42 /* AssignmentsViewController.swift in Sources */,
+				D9B6B1C324F75B76007D1979 /* Task+CoreDataClass.swift in Sources */,
+				D9B6B1CA24F75F5E007D1979 /* Assignment+CoreDataProperties.swift in Sources */,
 				D9D17BD024EF21BC00BB4BE7 /* AddTasksViewController.swift in Sources */,
 				D9AD896424F0B2AE00F49EB5 /* NavBarViewController.swift in Sources */,
 				D9D17BCC24EF210100BB4BE7 /* AddAssignmentsViewController.swift in Sources */,
+				D9B6B1C024F759B9007D1979 /* DailyPlanner.xcdatamodeld in Sources */,
 				D9D17BCE24EF218300BB4BE7 /* TasksViewController.swift in Sources */,
 				D9A949342224A2330024A1AD /* HomeViewController.swift in Sources */,
+				D9B6B1C424F75B76007D1979 /* Task+CoreDataProperties.swift in Sources */,
+				D9B6B1C924F75F5E007D1979 /* Assignment+CoreDataClass.swift in Sources */,
 				D9A949322224A2330024A1AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +401,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D9B6B1BE24F759B9007D1979 /* DailyPlanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D9B6B1BF24F759B9007D1979 /* DailyPlanner.xcdatamodel */,
+			);
+			currentVersion = D9B6B1BF24F759B9007D1979 /* DailyPlanner.xcdatamodel */;
+			path = DailyPlanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D9A949262224A2330024A1AD /* Project object */;
 }
