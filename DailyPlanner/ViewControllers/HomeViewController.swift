@@ -36,19 +36,22 @@ class HomeViewController: UIViewController {
         let time     = Date()
         let calendar = Calendar.current
         let hour     = calendar.component(.hour, from: time)
-        let morning = 3; let afternoon=12; let evening=16; let night=22;
+        let morning = 3
+        let afternoon=12
+        let evening=16
+        let night=22
 
         print("Hour: \(hour)")
-        if morning < hour, hour < afternoon {
+        if morning <= hour && hour < afternoon {
             //Morning Greeting
             GreetingLabel.text = morningGreetings.randomElement()
-        }else if afternoon < hour, hour < evening{
+        }else if afternoon <= hour && hour < evening{
             //Afternoon Greeting
             GreetingLabel.text = afternoonGreetings.randomElement()
-        }else if evening < hour, hour < night{
+        }else if evening <= hour && hour < night{
             //Evening Greeting
             GreetingLabel.text = eveningGreetings.randomElement()
-        }else{
+        }else if night <= hour && hour < morning{
             //Night Greeting
             GreetingLabel.text = nightGreetings.randomElement()
         }
