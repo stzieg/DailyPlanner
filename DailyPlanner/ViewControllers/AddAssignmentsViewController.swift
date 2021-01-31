@@ -7,18 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class AddAssignmentsViewController: UIViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
+    
     @IBOutlet weak var CourseNameField: UITextField!
     @IBOutlet weak var AssignmentNameField: UITextField!
     @IBOutlet weak var AssignmentNotesField: UITextView!
-    
-    @IBAction func courseNameClose(_ sender: UITextField) {
-        sender.resignFirstResponder()
-    }
-    @IBAction func assignmentClose(_ sender: UITextField) {
-        sender.resignFirstResponder()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +26,6 @@ class AddAssignmentsViewController: UIViewController {
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
-        //let flexSpace2 = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done , target: self, action: #selector(self.doneClicked))
         
         toolbar.sizeToFit()
@@ -40,8 +35,9 @@ class AddAssignmentsViewController: UIViewController {
         CourseNameField.inputAccessoryView = toolbar
         AssignmentNameField.inputAccessoryView = toolbar
         AssignmentNotesField.inputAccessoryView = toolbar
+        CourseNameField.autocapitalizationType = .sentences
+        AssignmentNameField.autocapitalizationType = .sentences
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
     
     @objc func keyboardWillShow(notification: NSNotification){
            var shouldMoveViewUp = false
@@ -49,11 +45,9 @@ class AddAssignmentsViewController: UIViewController {
               // if keyboard size is not available for some reason, dont do anything
               return
            }
-           
            if (self.AssignmentNotesField .isFirstResponder){
                shouldMoveViewUp = true
            }
-                   
            if(shouldMoveViewUp == true){
            // move the root view up by the distance of keyboard height
                self.view.bounds.origin.y = 0 + keyboardSize.height
@@ -67,5 +61,11 @@ class AddAssignmentsViewController: UIViewController {
     
     @objc func doneClicked(){
         view.endEditing(true)
+    }
+    @IBAction func courseNameClose(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    @IBAction func assignmentClose(_ sender: UITextField) {
+        sender.resignFirstResponder()
     }
 }

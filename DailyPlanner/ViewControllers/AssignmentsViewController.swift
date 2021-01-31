@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class AssignmentsViewController: UIViewController {
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Assignments screen loaded")
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
 }

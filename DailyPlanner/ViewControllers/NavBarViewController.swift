@@ -9,11 +9,10 @@
 import UIKit
 
 class NavBarViewController: UIViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
-    
 }
