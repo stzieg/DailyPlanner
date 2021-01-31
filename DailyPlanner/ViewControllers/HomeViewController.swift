@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
     
     @IBOutlet var WelcomeLabel: UILabel!
     @IBOutlet var GreetingLabel: UILabel!
@@ -56,7 +58,5 @@ class HomeViewController: UIViewController {
             GreetingLabel.text = nightGreetings.randomElement()
         }
     }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
 }
 
