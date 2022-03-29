@@ -2,37 +2,41 @@
 //  HomeViewController.swift
 //  DailyPlanner
 //
-//  Created by Sam Ziegler on 2/25/19.
-//  Copyright © 2019 Sam Ziegler. All rights reserved.
+//  Created by Sam Ziegler on 3/28/22.
+//  Copyright © 2022 Sam Ziegler. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
 class HomeViewController: UIViewController {
-    override var preferredStatusBarStyle: UIStatusBarStyle{return .lightContent}
     
     @IBOutlet var WelcomeLabel: UILabel!
     @IBOutlet var GreetingLabel: UILabel!
     
-    var morningGreetings:[String] = ["Welcome","Welcome!","Good morning!","Good morning",]
-    var afternoonGreetings:[String] = ["Welcome","Welcome!","Good afternoon!","Good afternoon"]
-    var eveningGreetings:[String] = ["Welcome","Welcome!","Good evening!","Good evening"]
-    var nightGreetings:[String] = ["Welcome","Welcome!","Good night!","Good night"]
+    var morningGreetings:[String] = ["Welcome","Welcome!","Good Morning!","Good Morning",]
+    var afternoonGreetings:[String] = ["Welcome","Welcome!","Good Afternoon!","Good Afternoon"]
+    var eveningGreetings:[String] = ["Welcome","Welcome!","Good Evening!","Good Evening"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("Home screen loaded")
-        self.navigationController?.navigationBar.shadowImage=UIImage()
         
+        //Set navigation bar attributes
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.barStyle = .black
+        
+        //request permission to send notifications on first use
+        NotificationManager.instance.requestAuthorization()
+        
+        //remove notification badge number when the app is opened
+        NotificationManager.instance.removeNotificationBadge()
+        
+        //Set the date on the homescreen and display a greeting based on the time of day
         let date = Date()
-        
         let formatter = DateFormatter()
         formatter.timeZone = .current
         formatter.locale = .current
         formatter.dateFormat = "EEEE, MMMM d"
-        
         WelcomeLabel.text = formatter.string(from: date)
 
         let time     = Date()
@@ -40,22 +44,14 @@ class HomeViewController: UIViewController {
         let hour     = calendar.component(.hour, from: time)
         let morning = 3
         let afternoon = 12
-        let evening = 16
-        let night = 22
+        let evening = 17
 
-        print("Hour: \(hour)")
         if morning <= hour && hour < afternoon {
-            //Morning Greeting
             GreetingLabel.text = morningGreetings.randomElement()
         }else if afternoon <= hour && hour < evening{
-            //Afternoon Greeting
             GreetingLabel.text = afternoonGreetings.randomElement()
-        }else if evening <= hour && hour < night{
-            //Evening Greeting
-            GreetingLabel.text = eveningGreetings.randomElement()
         }else{
-            //Night Greeting
-            GreetingLabel.text = nightGreetings.randomElement()
+            GreetingLabel.text = eveningGreetings.randomElement()
         }
     }
 }
